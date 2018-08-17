@@ -1,6 +1,6 @@
 {% set name = "pywin32-ctypes" %}
-{% set version = "0.1.2" %}
-{% set sha256 = "4820b830f42e6889d34142bcd07b3896018c3620d8c31f5e13b72caf1f4d1d0f" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "24ffc3b341d457d48e8922352130cf2644024a4ff09762a2261fd34c36ee5942" %}
 
 package:
   name: {{ name|lower }}
