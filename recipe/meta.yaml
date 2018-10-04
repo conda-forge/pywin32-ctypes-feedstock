@@ -1,23 +1,20 @@
-{% set name = "pywin32-ctypes" %}
 {% set version = "0.2.0" %}
-{% set sha256 = "24ffc3b341d457d48e8922352130cf2644024a4ff09762a2261fd34c36ee5942" %}
 
 package:
-  name: {{ name|lower }}
+  name: pywin32-ctypes
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/p/pywin32-ctypes/pywin32-ctypes-{{ version }}.tar.gz
+  sha256: 24ffc3b341d457d48e8922352130cf2644024a4ff09762a2261fd34c36ee5942
 
 build:
   number: 1000
   skip: True  # [not win]
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
   run:
