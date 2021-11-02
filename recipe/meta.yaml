@@ -9,7 +9,7 @@ source:
   sha256: 24ffc3b341d457d48e8922352130cf2644024a4ff09762a2261fd34c36ee5942
 
 build:
-  number: 1003
+  number: 1004
   skip: True  # [not win]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
