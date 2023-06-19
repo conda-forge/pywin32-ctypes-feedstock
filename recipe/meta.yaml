@@ -11,14 +11,15 @@ source:
 build:
   number: 0
   skip: true  # [not win]
+  skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python >=3.7
+    - python
     - pip
   run:
-    - python >=3.7
+    - python
 
 test:
   imports:
@@ -26,7 +27,7 @@ test:
 
 about:
   home: https://github.com/enthought/pywin32-ctypes
-  license: BSD 3 Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
   summary: A limited subset of pywin32 re-implemented using ctypes (or cffi)
