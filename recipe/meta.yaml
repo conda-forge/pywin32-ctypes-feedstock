@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: pywin32-ctypes
@@ -6,12 +6,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pywin32-ctypes/pywin32-ctypes-{{ version }}.tar.gz
-  sha256: 24ffc3b341d457d48e8922352130cf2644024a4ff09762a2261fd34c36ee5942
+  sha256: 934a2def1e5cbc472b2b6bf80680c0f03cd87df65dfd58bfd1846969de095b03
 
 build:
-  number: 1006
-  skip: True  # [not win]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  number: 0
+  skip: true  # [not win]
+  skip: true  # [py<37]
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
@@ -26,10 +27,10 @@ test:
 
 about:
   home: https://github.com/enthought/pywin32-ctypes
-  license: BSD 3 Clause
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'A limited subset of pywin32 re-implemented using ctypes (or cffi)'
+  summary: A limited subset of pywin32 re-implemented using ctypes (or cffi)
   description: |
     A reimplementation of pywin32 that is pure python. The default behaviour
     will try to use cffi (>= 1.3.0), if available, and fall back to using ctypes.
