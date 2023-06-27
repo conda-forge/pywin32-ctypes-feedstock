@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pywin32-ctypes-
 
 Home: https://github.com/enthought/pywin32-ctypes
 
-Package license: BSD 3 Clause
+Package license: BSD-3-Clause
 
 Summary: A limited subset of pywin32 re-implemented using ctypes (or cffi)
 
