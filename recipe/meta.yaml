@@ -1,4 +1,4 @@
-{% set version = "0.2.1" %}
+{% set version = "0.2.2" %}
 
 package:
   name: pywin32-ctypes
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/pywin32-ctypes/pywin32-ctypes-{{ version }}.tar.gz
-  sha256: 934a2def1e5cbc472b2b6bf80680c0f03cd87df65dfd58bfd1846969de095b03
+  sha256: 3426e063bdd5fd4df74a14fa3cf80a0b42845a87e1d1e81f6549f9daec593a60
 
 build:
   number: 0
