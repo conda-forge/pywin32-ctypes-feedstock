@@ -9,7 +9,7 @@ source:
   sha256: d162dc04946d704503b2edc4d55f3dba5c1d539ead017afa00142c38b9885755
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not win]
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
@@ -18,6 +18,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
   run:
     - python
 
