@@ -25,6 +25,9 @@ requirements:
 test:
   imports:
     - win32ctypes
+    - win32ctypes.pywin32.win32api
+  commands:
+    - python -c "from win32ctypes.pywin32 import win32api; assert win32api.GetSystemDirectory()"
 
 about:
   home: https://github.com/enthought/pywin32-ctypes
